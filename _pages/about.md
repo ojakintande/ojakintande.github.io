@@ -2,26 +2,23 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <a href='#'>Affiliations</a>. Department of Statistics, Computational Unit, University of Ibadan.
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Room 04, New Statistics Building</p>
+    <p>123 Department of Statistics</p>
+    <p>University of Ibadan, Oyo State.</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-Olalekan Joseph Akintande is a Lecturer and Researcher in Computational Statistics Unit, Department of Statistics, University of Ibadan. Olalekan is a global scholar who has won several international award - a prominent of which is the Microsoft Ph.D. research fellowship in 2021/2022.
+I am Olalekan Joseph Akintande, a Lecturer and Researcher in the Computational Statistics Unit, Department of Statistics, University of Ibadan. I won the 2021-2022 Microsoft PhD Research Fellow and was the first person to win the award from Nigeria. I am also a lead research consultant with the Laboratory for Interdisciplinary Statistical Analysis (LISA), University of Ibadan and a volunteer climate advocator with the Climate Change AI in  Programs Committee in Support of Community Events with an Africa focus.
 
+My PhD research interest falls within Responsible AI and Machine Intelligence systems. I have published widely in statistical modelling with applications in climate and energy modelling. I hope to focus my research activities after my PhD on Computational intelligence systems and applications in algorithmic fairness, social research and other fields of study for collaboration.
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I am open to research collaboration and seeking for postdoc opportunity in fairness machine and intelligence systems with application in any area of research.
