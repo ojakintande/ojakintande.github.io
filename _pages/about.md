@@ -10,7 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   address: >
     <p>Room 04, New Statistics Building</p>
-    <p>123 Department of Statistics</p>
+    <p>Department of Statistics</p>
     <p>University of Ibadan, Oyo State.</p>
 
 news: true  # includes a list of news items
