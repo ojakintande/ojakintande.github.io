@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Room 04, New Statistics Building</p>
+    <p>Room 02, New Statistics Building</p>
     <p>Department of Statistics</p>
     <p>University of Ibadan, Oyo State.</p>
 
