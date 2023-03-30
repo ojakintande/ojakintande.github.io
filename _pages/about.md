@@ -6,7 +6,7 @@ subtitle: <a href='#'>Affiliations</a>. Department of Statistics, Computational 
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: mine_pic.jpeg #prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
     <p>Room 02, New Statistics Building</p>
