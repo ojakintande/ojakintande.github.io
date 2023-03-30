@@ -1,13 +1,13 @@
 ---
 layout: page
-title: submenus
+title: Submenus
 nav: true
 nav_order: 6
 dropdown: true
-children: 
-    - title: publications
+children:
+    - title: Community services
       permalink: /publications/
     - title: divider
-    - title: projects
+    - title: Volunteer
       permalink: /projects/
 ---

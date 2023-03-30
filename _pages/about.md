@@ -1,11 +1,11 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: <a href='#'>Affiliations</a>. Department of Statistics, Computational Unit, University of Ibadan.
 
 profile:
-  align: right
+  align: left
   image: mine_pic.jpeg #prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
