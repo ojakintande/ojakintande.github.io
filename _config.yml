@@ -3,7 +3,7 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: O.
+first_name: Olalekan
 middle_name: J.
 last_name: Akintande
 email: aojsoft@gmail.com
@@ -355,6 +355,7 @@ enable_project_categories:  true   # enables categorization of projects into
                                    # multiple categories
 enable_medium_zoom:         true   # enables image zoom feature (as on medium.com)
 enable_progressbar:         true   # enables a horizontal progress bar linked to the vertical scroll position
+future: true
 
 # -----------------------------------------------------------------------------
 # Library versions
