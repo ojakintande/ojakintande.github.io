@@ -9,9 +9,9 @@ profile:
   image: mine_pic.jpeg #prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Room 02, New Statistics Building</p>
+    <p>Room 02</p>
     <p>Department of Statistics</p>
-    <p>University of Ibadan, Oyo State.</p>
+    <p>University of Ibadan.</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
