@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /teaching/
+permalink: /projects/
 title: Teaching
 description: Statistical Computing II
 nav: true
