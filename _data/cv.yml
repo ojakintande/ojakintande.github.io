@@ -3,8 +3,14 @@
   contents:
     - name: Full Name
       value: Olalekan Joseph Akintande
+    - name: Pronoun
+      value: He/Him/His
     - name: Languages
-      value: English, Yoruba
+      value: Yoruba, English, Pingin
+    - name: Identity
+      value: Yoruba, South West, Nigeria.
+    - name: Place of birth
+      value: Lagos (Eko), South West, Nigeria.
 
 - title: Education
   type: time_table

@@ -5,9 +5,9 @@ nav: true
 nav_order: 6
 dropdown: true
 children:
-    - title: Community services
-      permalink: /publications/
+    - title: Google Scholar
+      permalink: https://scholar.google.com/citations?user=Wn3hpPsAAAAJ&hl=en
     - title: divider
-    - title: Volunteer
-      permalink: /projects/
+    - title: LinkedIn
+      permalink: https://www.linkedin.com/in/aojsoft/
 ---
