@@ -2,96 +2,95 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Olalekan Joseph Akintande
     - name: Languages
-      value: English, German
+      value: English, Yoruba
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Ph.D. in View
+      institution: University of Ibadan, Ibadan, Nigeria
+      year: 2023
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - Algorithmic fairness, Responsible AI, Machine Intelligence Systems
+        - title: Activities
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
+            - Won the 2021/2022 Microsoft Ph.D. Research Fellowshi
+            - Fairness Accountability & Transparency (FAccT) 2022, CoEx Convention Centre, Seoul, South Korea
+            - LISA 2020 Symposium, Kwame Nkrumah University of Science and Technology (KNUST), Ghana
+            - Black in AI co-located with the thirty-third Conference on Neural Information Processing Systems (NeurIPS) 2019, Vancouver, Canada.
+            - Virtual - Thirty-sixth Conference on Neural Information Processing Systems (NeurIPS) 2022, New Orleans, Louisiana, USA.
     - title: Federal teaching diploma
       institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
       year: 1900
       description:
         - Description 1.
         - Description 2.
+            - Virtual - Database Systems for Advanced Applications (DASFAA) 2021, Taipei, Taiwan.
+            - Black in AI co-located with the thirty-fourth Conference on Neural Information Processing Systems (NeurIPS), 2020, Virtual-only Conference
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Full time Lecturer of Computational Statistics
+      institution: Department of Statistics, University of Ibadan
+      year: 2023 - date
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Statistical Computing II
+        - Multivariate Analysis
+    - title: Adjunct Lecturer
+      institution: Distance Learning Centre, Department of Statistics, University of Ibadan
+      year: 2018 - date
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - Stochastics Process
+        - Statistical Inference II
+    - title: Researcher Intern
+      institution: Microsoft Africa Research Institute (MARI), Kenya.
+      year: May - July, 2022
       description:
+        - Microsoft Search, Assistant & Intelligence (MSAI)
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+    - title: Research Exchange Scholar
+      institution: ACADEMY Mobility Project, Kenyatta University, Kenya.
+      year: January - October, 2020
 
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Teaching Assistant (Virtual)
+      institution: Computational Neuroscience, Neuromatch Academy, USA
+      year: June  - July, 2021
+
+    - title: Core Team
+      institution: Climate Change AI (CCAI), USA
+      year: June 2022 - Date
+      description: Programs Committee in Support of Community Events with an Africa focus
+
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
+    - year: 2021/2022
+      items:
+        - Microsoft Ph.D. Research Fellowship
+    - year: 2019/2020
+      items:
+        - Research Exchange
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
-      items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+    - title: Algorithmic Fairness
       items:
-        - Description 1.
-        - Description 2.
+        - Responsible AI
+        - Machine Intelligence Systems
+        - Social Research - SDGs
+    - title: Statistical  & Machine Learning
+      items:
+        - Statistical Modelling
+        - Data Science
+        - Climate Change modelling
+        - Energy & Renewable Energy
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Teaching, Writing, Researching, etc.
