@@ -7,7 +7,7 @@ nav_order: 2
 display_categories: [work, fun]
 horizontal: false
 ---
-
+-------
 <!-- pages/projects.md -->
 <div class="teaching">
 {%- if site.enable_teaching_categories and page.display_categories %}
