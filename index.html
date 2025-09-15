@@ -283,5 +283,77 @@
             });
         });
     </script>
+
+    <script>
+// Simple client-side router
+document.addEventListener('DOMContentLoaded', function() {
+    // Handle navigation
+    function navigateTo(page) {
+        // Update URL without reloading
+        history.pushState(null, null, page);
+        
+        // Hide all content sections
+        document.querySelectorAll('.page-content').forEach(section => {
+            section.style.display = 'none';
+        });
+        
+        // Show the requested section
+        const targetSection = document.getElementById(page.replace('.html', ''));
+        if (targetSection) {
+            targetSection.style.display = 'block';
+            window.scrollTo(0, 0);
+        } else {
+            // Show home content as fallback
+            document.getElementById('home').style.display = 'block';
+        }
+        
+        // Update active nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === page) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
+    // Create content sections for each page
+    const contentContainer = document.createElement('div');
+    contentContainer.innerHTML = `
+        <section id="home" class="page-content"></section>
+        <section id="research" class="page-content" style="display:none"></section>
+        <section id="publications" class="page-content" style="display:none"></section>
+        <section id="ongoing" class="page-content" style="display:none"></section>
+        <section id="teaching" class="page-content" style="display:none"></section>
+        <section id="gallery" class="page-content" style="display:none"></section>
+    `;
+    document.querySelector('footer').before(contentContainer);
+    
+    // Move existing home content to home section
+    const homeContent = document.querySelector('.container.mb-5');
+    const statsSection = document.querySelector('.stats');
+    document.getElementById('home').appendChild(homeContent);
+    document.getElementById('home').appendChild(statsSection);
+    
+    // Intercept navigation clicks
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (this.getAttribute('href') !== 'index.html') {
+                e.preventDefault();
+                navigateTo(this.getAttribute('href'));
+            }
+        });
+    });
+    
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', function() {
+        navigateTo(location.pathname);
+    });
+    
+    // Load content based on current URL
+    if (location.pathname !== '/' && location.pathname !== '/index.html') {
+        navigateTo(location.pathname);
+    }
+});
+</script>
 </body>
 </html>
