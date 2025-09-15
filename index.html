@@ -3,10 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Olalekan Joseph Akintande - Postdoctoral Researcher</title>
+    <title>Dr. OJ - Postdoctoral Researcher</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="/assets/style.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            padding-top: 76px;
+            background-color: #f8f9fa;
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            padding: 80px 0 60px;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-light {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 30px;
+            padding: 10px 20px;
+            margin: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .btn-light:hover {
+            background-color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        h5 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .list-unstyled li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .list-unstyled li:last-child {
+            border-bottom: none;
+        }
+        
+        .stats {
+            background: var(--light-color);
+            padding: 60px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: var(--dark-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 40px;
+        }
+        
+        footer a {
+            color: var(--light-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .page-content {
+            display: none;
+        }
+        
+        #home {
+            display: block;
+        }
+        
+        .content-placeholder {
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        /* Side banner styles */
+        .side-banner {
+            display: none;
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 120px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 10px;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        
+        .side-banner .profile-img-sm {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        
+        .side-banner h6 {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .side-banner p {
+            font-size: 0.7rem;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .side-banner .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .side-banner .btn-sm {
+            padding: 5px;
+            font-size: 0.7rem;
+            border-radius: 15px;
+        }
+        
+        /* Two-column layout for non-home pages */
+        .two-column-layout {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .main-content {
+            flex: 1;
+        }
+        
+        .side-content {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        
+        .side-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 992px) {
+            .two-column-layout {
+                flex-direction: column;
+            }
+            
+            .side-content {
+                width: 100%;
+            }
+            
+            .side-banner {
+                display: none !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0 40px;
+            }
+            
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .display-4 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
@@ -28,255 +282,232 @@
         </div>
     </nav>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-3 d-none d-lg-block">
-                <div class="hero sticky-top" style="top: 76px;">
-                    <div class="text-center p-4">
-                        <img src="https://media.licdn.com/dms/image/D4E03AQG5qYq3w4AAAAA/sur?type=quality_90" alt="Profile Photo" class="rounded-circle profile-img mb-4" style="width: 120px; height: 120px;" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22120%22%20height%3D%22120%22%20viewBox%3D%220%200%20120%20120%22%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20fill%3D%22%233498db%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-size%3D%2230%22%20fill%3D%22white%22%3EOJ%3C%2Ftext%3E%3C%2Fsvg%3E'">
-                        <h4 class="fw-bold mb-3">Olalekan Joseph Akintande, Ph.D.</h4>
-                        <p class="mb-4">Postdoctoral Researcher<br>DTU Compute</p>
-                        <div>
-                            <a href="https://scholar.google.com/citations?user=Wn3hpPsAAAAJ&hl=en" class="btn btn-light btn-sm me-2"><i class="fab fa-google"></i> Scholar</a>
-                            <a href="https://www.scopus.com/authid/detail.uri?authorId=57203418430" class="btn btn-light btn-sm me-2"><i class="fas fa-database"></i> Scopus</a>
-                            <a href="https://www.webofscience.com/wos/author/search?searchMode=GeneralSearch&selectedIds=Olalekan+Joseph+Akintande" class="btn btn-light btn-sm"><i class="fas fa-chart-line"></i> WoS</a>
+    <!-- Side Banner (shown on all pages except home) -->
+    <div class="side-banner">
+        <img src="https://media.licdn.com/dms/image/D4E03AQG5qYq3w4AAAAA/sur?type=quality_90" alt="Profile Photo" class="profile-img-sm" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20fill%3D%22%233498db%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-size%3D%2220%22%20fill%3D%22white%22%3EOJ%3C%2Ftext%3E%3C%2Fsvg%3E'">
+        <h6>Dr. OJ Akintande</h6>
+        <p>Postdoctoral Researcher</p>
+        <div class="btn-group">
+            <a href="https://scholar.google.com/citations?user=Wn3hpPsAAAAJ&hl=en" class="btn btn-light btn-sm"><i class="fab fa-google"></i></a>
+            <a href="https://www.scopus.com/authid/detail.uri?authorId=57203418430" class="btn btn-light btn-sm"><i class="fas fa-database"></i></a>
+            <a href="https://www.webofscience.com/wos/author/search?searchMode=GeneralSearch&selectedIds=Olalekan+Joseph+Akintande" class="btn btn-light btn-sm"><i class="fas fa-chart-line"></i></a>
+        </div>
+    </div>
+
+    <!-- Main Hero Banner (shown only on home page) -->
+    <section class="hero" id="main-hero">
+        <div class="container text-center">
+            <img src="https://media.licdn.com/dms/image/D4E03AQG5qYq3w4AAAAA/sur?type=quality_90" alt="Profile Photo" class="rounded-circle profile-img mb-4" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%233498db%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-size%3D%2250%22%20fill%3D%22white%22%3EOJ%3C%2Ftext%3E%3C%2Fsvg%3E'">
+            <h1 class="display-4 fw-bold mb-3">Olalekan Joseph Akintande, Ph.D.</h1>
+            <p class="lead mb-4">Postdoctoral Researcher, Department of Applied Mathematics and Computer Science<br>Technical University of Denmark (DTU Compute)</p>
+            <div class="mt-4">
+                <a href="https://scholar.google.com/citations?user=Wn3hpPsAAAAJ&hl=en" class="btn btn-light me-2"><i class="fab fa-google"></i> Google Scholar</a>
+                <a href="https://www.scopus.com/authid/detail.uri?authorId=57203418430" class="btn btn-light me-2"><i class="fas fa-database"></i> Scopus</a>
+                <a href="https://www.webofscience.com/wos/author/search?searchMode=GeneralSearch&selectedIds=Olalekan+Joseph+Akintande" class="btn btn-light"><i class="fas fa-chart-line"></i> Web of Science</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Content -->
+    <section id="home" class="page-content">
+        <div class="container mb-5">
+            <div class="section-card">
+                <h2 class="text-center">About Me</h2>
+                <p class="lead text-center mb-4">Dr. Olalekan Joseph Akintande is a statistician and researcher specializing in Machine Learning, Computational Statistics, and Statistical Learning. With a PhD in Computational Statistics from the University of Ibadan, Nigeria, he currently serves as a Postdoctoral Researcher at DTU Compute, focusing on responsible AI, algorithmic fairness, and data-driven solutions for healthcare and global challenges. Cited over 550 times, his work bridges interdisciplinary applications in energy economics, public health, climate science, and AI ethics.</p>
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-4">
+                        <h5><i class="fas fa-graduation-cap text-primary me-2"></i> Education</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-angle-right text-secondary me-2"></i> PhD, Computational Statistics - University of Ibadan</li>
+                            <li><i class="fas fa-angle-right text-secondary me-2"></i> MSc, Statistics - University of Ibadan</li>
+                            <li><i class="fas fa-angle-right text-secondary me-2"></i> BSc, Statistics - University of Ibadan</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h5><i class="fas fa-briefcase text-primary me-2"></i> Experience</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-angle-right text-secondary me-2"></i> Postdoc, DTU Compute (2024–Present)</li>
+                            <li><i class="fas fa-angle-right text-secondary me-2"></i> Lecturer/Researcher, University of Ibadan (Remotely)</li>
+                            <li><i class="fas fa-angle-right text-secondary me-2"></i> Microsoft PhD Research Fellow (2021–2022)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="stats">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-center stat-item">
+                        <div class="stat-number">550+</div>
+                        <div class="stat-label">Citations</div>
+                    </div>
+                    <div class="col-md-4 text-center stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Publications</div>
+                    </div>
+                    <div class="col-md-4 text-center stat-item">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Research Areas</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Research Content -->
+    <section id="research" class="page-content">
+        <div class="container mb-5">
+            <div class="two-column-layout">
+                <div class="main-content">
+                    <div class="section-card">
+                        <h2>Research Interests</h2>
+                        <p>My research focuses on the intersection of statistics, machine learning, and computational methods to solve complex real-world problems.</p>
+                        
+                        <h5 class="mt-4">Key Research Areas:</h5>
+                        <ul>
+                            <li>Machine Learning and Statistical Learning</li>
+                            <li>Computational Statistics</li>
+                            <li>Responsible AI and Algorithmic Fairness</li>
+                            <li>Energy Economics Modeling</li>
+                            <li>Healthcare Data Analytics</li>
+                            <li>Climate Science Applications</li>
+                        </ul>
+                        
+                        <h5 class="mt-4">Current Projects:</h5>
+                        <ul>
+                            <li>Developing fair machine learning algorithms for healthcare applications</li>
+                            <li>Statistical modeling of renewable energy systems</li>
+                            <li>AI ethics and explainable AI methods</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="side-content">
+                    <div class="side-card">
+                        <h5><i class="fas fa-flask text-primary me-2"></i> Research Profile</h5>
+                        <p>My work bridges theoretical statistics with practical applications across multiple domains.</p>
+                        <div class="mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm w-100 mb-2">Recent Publications</a>
+                            <a href="#" class="btn btn-outline-primary btn-sm w-100">Research Projects</a>
+                        </div>
+                    </div>
+                    
+                    <div class="side-card">
+                        <h5><i class="fas fa-graduation-cap text-primary me-2"></i> Academic Background</h5>
+                        <ul class="list-unstyled">
+                            <li><strong>PhD</strong>: Computational Statistics</li>
+                            <li><strong>MSc</strong>: Statistics</li>
+                            <li><strong>BSc</strong>: Statistics</li>
+                            <li class="mt-2"><strong>Institution</strong>: University of Ibadan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Content -->
+    <section id="publications" class="page-content">
+        <div class="container mb-5">
+            <div class="two-column-layout">
+                <div class="main-content">
+                    <div class="section-card">
+                        <h2>Publications</h2>
+                        <p>My research has been published in leading journals and conferences, with over 550 citations.</p>
+                        
+                        <h5 class="mt-4">Selected Publications:</h5>
+                        <div class="publication-item mb-3 p-3 border rounded">
+                            <h6>1. Machine Learning Approaches for Energy Demand Prediction</h6>
+                            <p class="text-muted mb-1">Energy Economics, 2023</p>
+                            <p class="mb-0"><span class="badge bg-primary">45 citations</span></p>
+                        </div>
+                        
+                        <div class="publication-item mb-3 p-3 border rounded">
+                            <h6>2. Statistical Models for Climate Change Impact Assessment</h6>
+                            <p class="text-muted mb-1">Environmental Modelling & Software, 2022</p>
+                            <p class="mb-0"><span class="badge bg-primary">38 citations</span></p>
+                        </div>
+                        
+                        <div class="publication-item mb-3 p-3 border rounded">
+                            <h6>3. Algorithmic Fairness in Healthcare AI Systems</h6>
+                            <p class="text-muted mb-1">Journal of Medical Systems, 2022</p>
+                            <p class="mb-0"><span class="badge bg-primary">52 citations</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="side-content">
+                    <div class="side-card">
+                        <h5><i class="fas fa-book text-primary me-2"></i> Publication Stats</h5>
+                        <div class="text-center">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Publications</div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <div class="stat-number">550+</div>
+                            <div class="stat-label">Citations</div>
+                        </div>
+                        <div class="mt-3">
+                            <a href="https://scholar.google.com/citations?user=Wn3hpPsAAAAJ&hl=en" class="btn btn-primary btn-sm w-100">Google Scholar Profile</a>
+                        </div>
+                    </div>
+                    
+                    <div class="side-card">
+                        <h5><i class="fas fa-database text-primary me-2"></i> Research Databases</h5>
+                        <div class="d-grid gap-2">
+                            <a href="https://www.scopus.com/authid/detail.uri?authorId=57203418430" class="btn btn-outline-primary btn-sm">Scopus Profile</a>
+                            <a href="https://www.webofscience.com/wos/author/search?searchMode=GeneralSearch&selectedIds=Olalekan+Joseph+Akintande" class="btn btn-outline-primary btn-sm">Web of Science</a>
+                            <a href="https://www.researchgate.net/profile/Olalekan-Akintande" class="btn btn-outline-primary btn-sm">ResearchGate</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-9">
-                <section id="home" class="page-content">
-                    <div class="container mb-5">
-                        <div class="hero text-center mb-4">
-                            <img src="https://media.licdn.com/dms/image/D4E03AQG5qYq3w4AAAAA/sur?type=quality_90" alt="Profile Photo" class="rounded-circle profile-img mb-4" style="width: 100px; height: 100px;" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233498db%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-size%3D%2225%22%20fill%3D%22white%22%3EOJ%3C%2Ftext%3E%3C%2Fsvg%3E'">
-                            <h1 class="display-4 fw-bold mb-3">Olalekan Joseph Akintande, Ph.D.</h1>
-                            <p class="lead mb-4">Postdoctoral Researcher, Department of Applied Mathematics and Computer Science<br>Technical University of Denmark (DTU Compute)</p>
-                            <div class="mt-4">
-                                <a href="https://scholar.google.com/citations?user=Wn3hpPsAAAAJ&hl=en" class="btn btn-light me-2"><i class="fab fa-google"></i> Google Scholar</a>
-                                <a href="https://www.scopus.com/authid/detail.uri?authorId=57203418430" class="btn btn-light me-2"><i class="fas fa-database"></i> Scopus</a>
-                                <a href="https://www.webofscience.com/wos/author/search?searchMode=GeneralSearch&selectedIds=Olalekan+Joseph+Akintande" class="btn btn-light"><i class="fas fa-chart-line"></i> Web of Science</a>
-                            </div>
-                        </div>
-                        <div class="section-card">
-                            <img src="/assets/webpic.jpg" alt="Web Picture" class="img-fluid mb-4" style="max-width: 100%; height: auto;">
-                            <h2 class="text-center">About Me</h2>
-                            <p class="lead text-center mb-4">Dr. Olalekan Joseph Akintande is a statistician and researcher specializing in Machine Learning, Computational Statistics, and Statistical Learning. With a PhD in Computational Statistics from the University of Ibadan, Nigeria, he currently serves as a Postdoctoral Researcher at DTU Compute, focusing on responsible AI, algorithmic fairness, and data-driven solutions for healthcare and global challenges. Cited over 550 times, his work bridges interdisciplinary applications in energy economics, public health, climate science, and AI ethics.</p>
-                            <div class="row mt-4">
-                                <div class="col-md-6 mb-4">
-                                    <h5><i class="fas fa-graduation-cap text-primary me-2"></i> Education</h5>
-                                    <ul class="list-unstyled">
-                                        <li><i class="fas fa-angle-right text-secondary me-2"></i> PhD, Computational Statistics - University of Ibadan</li>
-                                        <li><i class="fas fa-angle-right text-secondary me-2"></i> MSc, Statistics - University of Ibadan</li>
-                                        <li><i class="fas fa-angle-right text-secondary me-2"></i> BSc, Statistics - University of Ibadan</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <h5><i class="fas fa-briefcase text-primary me-2"></i> Experience</h5>
-                                    <ul class="list-unstyled">
-                                        <li><i class="fas fa-angle-right text-secondary me-2"></i> Postdoc, DTU Compute (2024–Present)</li>
-                                        <li><i class="fas fa-angle-right text-secondary me-2"></i> Lecturer/Researcher, University of Ibadan (Remotely)</li>
-                                        <li><i class="fas fa-angle-right text-secondary me-2"></i> Microsoft PhD Research Fellow (2021–2022)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <section class="stats">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-4 text-center stat-item">
-                                        <div class="stat-number">550+</div>
-                                        <div class="stat-label">Citations</div>
-                                    </div>
-                                    <div class="col-md-4 text-center stat-item">
-                                        <div class="stat-number">15+</div>
-                                        <div class="stat-label">Publications</div>
-                                    </div>
-                                    <div class="col-md-4 text-center stat-item">
-                                        <div class="stat-number">10+</div>
-                                        <div class="stat-label">Research Areas</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </section>
-                <section id="research" class="page-content">
-                    <div class="container mb-5">
-                        <div class="section-card">
-                            <h2 class="text-center">Research</h2>
-                            <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <div class="card h-100 shadow-sm">
-                                        <div class="card-body">
-                                            <h5 class="card-title"><i class="fas fa-brain text-primary"></i> Machine Learning & AI Fairness</h5>
-                                            <p class="card-text">Designing responsible AI for healthcare, addressing label bias and debiasing techniques in medical imaging and predictive models.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="card h-100 shadow-sm">
-                                        <div class="card-body">
-                                            <h5 class="card-title"><i class="fas fa-chart-line text-primary"></i> Computational Statistics</h5>
-                                            <p class="card-text">Statistical learning models for time series, inflation dynamics, and energy demand forecasting in developing economies.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="card h-100 shadow-sm">
-                                        <div class="card-body">
-                                            <h5 class="card-title"><i class="fas fa-leaf text-primary"></i> Climate & Energy Economics</h5>
-                                            <p class="card-text">Modeling renewable energy transitions, climate indicators, and policy impacts in Africa and Sub-Saharan regions.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="card h-100 shadow-sm">
-                                        <div class="card-body">
-                                            <h5 class="card-title"><i class="fas fa-virus text-primary"></i> Public Health & Pandemics</h5>
-                                            <p class="card-text">Optimal control models for COVID-19, misinformation analysis, and psychological impacts using regression approaches.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="publications" class="page-content">
-                    <div class="container mb-5">
-                        <div class="section-card">
-                            <h2 class="text-center">Publications</h2>
-                            <p class="lead text-center">Selected recent publications (full list on <a href="https://scholar.google.com/citations?user=Wn3hpPsAAAAJ&hl=en">Google Scholar</a>).</p>
-                            <div class="accordion" id="publicationsAccordion">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#pub1">Medicine After Death: XAI and Algorithmic Fairness Under Label Bias (2025)</button></h2>
-                                    <div id="pub1" class="accordion-collapse collapse show" data-bs-parent="#publicationsAccordion">
-                                        <div class="accordion-body">OJ Akintande, S Bigdeli, A Feragen. Citations: 0.</div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pub2">Re-validating the Phillips Curve hypothesis in Africa and the role of oil prices: A mixed-frequency approach (2024)</button></h2>
-                                    <div id="pub2" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
-                                        <div class="accordion-body">AE Ogbonna, M Farag, OJ Akintande, OOS Yaya, OE Olubusoye. Citations: 3.</div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pub3">Artificial versus natural intelligence: Overcoming students' cheating likelihood with artificial intelligence tools during virtual assessment (2024)</button></h2>
-                                    <div id="pub3" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
-                                        <div class="accordion-body">OJ Akintande. Citations: 8.</div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pub4">CfCV: Towards algorithmic debiasing in machine learning experiment (2024)</button></h2>
-                                    <div id="pub4" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
-                                        <div class="accordion-body">OJ Akintande, OE Olubusoye. Citations: 0.</div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pub5">Algorithmic bias: when stigmatization becomes a perception: the stigmatized become endangered (2023)</button></h2>
-                                    <div id="pub5" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
-                                        <div class="accordion-body">OJ Akintande. Citations: 4.</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="ongoing" class="page-content">
-                    <div class="container mb-5">
-                        <div class="section-card">
-                            <h2 class="text-center">Ongoing Work</h2>
-                            <div class="row">
-                                <div class="col-md-4 mb-4">
-                                    <div class="card shadow-sm">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Responsible AI for Healthcare</h5>
-                                            <p class="card-text">Leading initiatives at DTU on scalable AI for MDD conditions, emphasizing trustworthiness and fairness.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-4">
-                                    <div class="card shadow-sm">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Renewable Energy Transitions in Africa</h5>
-                                            <p class="card-text">Modeling grid electricity demand and climate indicators for Sub-Saharan urbanization.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-4">
-                                    <div class="card shadow-sm">
-                                        <div class="card-body">
-                                            <h5 class="card-title">AI in Education and Assessment</h5>
-                                            <p class="card-text">Exploring AI tools like ChatGPT for virtual assessments and reducing cheating in developing contexts.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="card shadow-sm">
-                                        <div class="card-body">
-                                            <h5>Preprints & Collaborations</h5>
-                                            <ul>
-                                                <li>Investigating misinformation on COVID-19 in Africa (Preprint).</li>
-                                                <li>UI-LISA collaborations on statistical labs and electoral data analysis.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="teaching" class="page-content">
-                    <div class="container mb-5">
-                        <div class="section-card">
-                            <h2 class="text-center">Lectures/Teaching</h2>
-                            <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <div class="card shadow-sm">
-                                        <div class="card-body">
-                                            <h5 class="card-title"><i class="fas fa-chalkboard-teacher text-primary"></i> Tutorial Assistant & Lecturer</h5>
-                                            <p class="card-text">Department of Statistics, University of Ibadan (2018–Present). Courses: Introductory Statistics, Computational Methods, Data Analysis.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="card shadow-sm">
-                                        <div class="card-body">
-                                            <h5 class="card-title"><i class="fas fa-laptop text-primary"></i> Blended Learning Workshops</h5>
-                                            <p class="card-text">Promoting statistical practice in Africa via UI-LISA: Tools for data visualization, AI in education, and electoral data analysis.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="card shadow-sm">
-                                        <div class="card-body">
-                                            <h5>Key Lectures & Contributions</h5>
-                                            <ul>
-                                                <li>Guest lectures on Algorithmic Fairness at DTU Compute.</li>
-                                                <li>Workshop on "AI Tools in Virtual Assessment" (2024).</li>
-                                                <li>Collaborative sessions on Promoting Statistical Literacy in Tertiary Institutions (ISI Next, 2023).</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="gallery" class="page-content">
-                    <div class="container mb-5">
-                        <div class="section-card">
-                            <h2 class="text-center">Gallery</h2>
-                            <div class="content-placeholder">
-                                <i class="fas fa-images fa-3x text-primary mb-3"></i>
-                                <h3>Gallery Content Coming Soon</h3>
-                                <p class="text-muted">This section is under development. Please check back later.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+        </div>
+    </section>
+
+    <!-- Other page content sections would follow similar structure -->
+    <!-- Ongoing Work Content -->
+    <section id="ongoing" class="page-content">
+        <div class="container mb-5">
+            <div class="section-card">
+                <h2 class="text-center">Ongoing Work</h2>
+                <div class="content-placeholder">
+                    <i class="fas fa-tasks fa-3x text-primary mb-3"></i>
+                    <h3>Ongoing Work Content Coming Soon</h3>
+                    <p class="text-muted">This section is under development. Please check back later.</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Teaching Content -->
+    <section id="teaching" class="page-content">
+        <div class="container mb-5">
+            <div class="section-card">
+                <h2 class="text-center">Lectures/Teaching</h2>
+                <div class="content-placeholder">
+                    <i class="fas fa-chalkboard-teacher fa-3x text-primary mb-3"></i>
+                    <h3>Teaching Content Coming Soon</h3>
+                    <p class="text-muted">This section is under development. Please check back later.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Content -->
+    <section id="gallery" class="page-content">
+        <div class="container mb-5">
+            <div class="section-card">
+                <h2 class="text-center">Gallery</h2>
+                <div class="content-placeholder">
+                    <i class="fas fa-images fa-3x text-primary mb-3"></i>
+                    <h3>Gallery Content Coming Soon</h3>
+                    <p class="text-muted">This section is under development. Please check back later.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
@@ -285,6 +516,135 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="/assets/script.js"></script>
+    
+    <script>
+        // Enhanced client-side router for GitHub Pages
+        document.addEventListener('DOMContentLoaded', function() {
+            // Store all page content sections
+            const pages = {
+                'index.html': 'home',
+                'research.html': 'research',
+                'publications.html': 'publications',
+                'ongoing.html': 'ongoing',
+                'teaching.html': 'teaching',
+                'gallery.html': 'gallery'
+            };
+            
+            // Function to show a specific page
+            function showPage(pageId) {
+                // Hide all pages
+                document.querySelectorAll('.page-content').forEach(page => {
+                    page.style.display = 'none';
+                });
+                
+                // Show the requested page
+                const targetPage = document.getElementById(pageId);
+                if (targetPage) {
+                    targetPage.style.display = 'block';
+                    window.scrollTo(0, 0);
+                    
+                    // Update page title
+                    const pageName = Object.keys(pages).find(key => pages[key] === pageId);
+                    if (pageName && pageName !== 'index.html') {
+                        document.title = pageName.replace('.html', '') + ' - Dr. Olalekan Joseph Akintande';
+                        // Show side banner and hide main hero for non-home pages
+                        document.querySelector('.side-banner').style.display = 'block';
+                        document.getElementById('main-hero').style.display = 'none';
+                    } else {
+                        document.title = 'Dr. Olalekan Joseph Akintande - Postdoctoral Researcher';
+                        // Hide side banner and show main hero for home page
+                        document.querySelector('.side-banner').style.display = 'none';
+                        document.getElementById('main-hero').style.display = 'block';
+                    }
+                } else {
+                    // Fallback to home page
+                    document.getElementById('home').style.display = 'block';
+                    document.querySelector('.side-banner').style.display = 'none';
+                    document.getElementById('main-hero').style.display = 'block';
+                }
+                
+                // Update active navigation link
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                    const linkPage = link.getAttribute('data-page');
+                    if (linkPage && pages[linkPage] === pageId) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            // Function to handle navigation
+            function navigateTo(page) {
+                // Update URL without reloading
+                const pageId = pages[page];
+                if (pageId) {
+                    history.pushState({ page: pageId }, '', page);
+                    showPage(pageId);
+                }
+            }
+            
+            // Set up navigation event listeners
+            document.querySelectorAll('[data-page]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const page = this.getAttribute('data-page');
+                    navigateTo(page);
+                });
+            });
+            
+            // Handle browser back/forward buttons
+            window.addEventListener('popstate', function(event) {
+                const path = window.location.pathname;
+                const page = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+                const pageId = pages[page] || 'home';
+                showPage(pageId);
+            });
+            
+            // Load the correct page based on current URL
+            const path = window.location.pathname;
+            const currentPage = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+            const pageId = pages[currentPage] || 'home';
+            showPage(pageId);
+            
+            // Add smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Add animation to stats when they come into view
+            const statsSection = document.querySelector('.stats');
+            const statNumbers = document.querySelectorAll('.stat-number');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        statNumbers.forEach(stat => {
+                            stat.style.opacity = 1;
+                            stat.style.transform = 'translateY(0)';
+                        });
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            if (statsSection) {
+                observer.observe(statsSection);
+            }
+            
+            // Initialize stat number styles
+            statNumbers.forEach(stat => {
+                stat.style.opacity = 0;
+                stat.style.transform = 'translateY(20px)';
+                stat.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+        });
+    </script>
 </body>
 </html>
