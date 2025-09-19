@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - OJ. Akintande</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            padding-top: 76px;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: var(--primary-color) !important;
+        }
+        .navbar-brand {
+            font-weight: 600;
+        }
+        .nav-link {
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        .bg-primary {
+            background-color: var(--primary-color) !important;
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        .social-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: color 0.3s, transform 0.3s;
+            margin-right: 15px;
+        }
+        .social-icon:hover {
+            color: var(--secondary-color);
+            transform: scale(1.2);
+        }
+        .cv-section {
+            margin-bottom: 30px;
+        }
+        .cv-section h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 8px;
+        }
+        .cv-item {
+            margin-bottom: 15px;
+        }
+        .cv-item p {
+            margin-bottom: 5px;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding-top: 66px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-user-tie"></i> OJ. Akintande</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ongoing.html">Ongoing Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teaching.html">Lectures/Teaching</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="container mt-5 pt-4">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="section-title">Curriculum Vitae</h2>
+                <p>Below is a summary of my professional experience, education, research interests, publications, and teaching activities. Click the button to download a PDF version.</p>
+                <button class="btn btn-primary mb-3" onclick="downloadPDF()"><i class="fas fa-file-pdf"></i> Download as PDF</button>
+
+                <!-- Personal Information (from index.html) -->
+                <div class="cv-section">
+                    <h3>Personal Information</h3>
+                    <div class="cv-item">
+                        <p><strong>Name:</strong> OJ. Akintande</p>
+                        <p><strong>Title:</strong> Postdoctoral Researcher</p>
+                        <p><strong>Affiliation:</strong> Technical University of Denmark</p>
+                        <p><strong>Email:</strong> <a href="mailto:ojoak@dtu.dk">ojoak@dtu.dk</a></p>
+                        <p><strong>Phone:</strong> +45 9194 3447</p>
+                        <p><strong>Address:</strong> DTU Compute, Department of Applied Mathematics and Computer Science, Technical University of Denmark, 2800 Kgs. Lyngby, Denmark</p>
+                        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/aojsoft/">aojsoft</a></p>
+                        <p><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=Wn3hpPsAAAAJ&hl=en">Profile</a></p>
+                        <p><strong>Scopus:</strong> <a href="https://www.scopus.com/authid/detail.uri?authorId=57203418430">Profile</a></p>
+                    </div>
+                </div>
+
+                <!-- Education (from index.html) -->
+                <div class="cv-section">
+                    <h3>Education</h3>
+                    <div class="cv-item">
+                        <p><strong>Ph.D., Statistics (Computational Statistics)</strong> – July 2023</p>
+                        <p class="text-muted">University of Ibadan, Ibadan, Nigeria</p>
+                        <p>Dissertation: Algorithmic Debiasing Strategy as a Revisit of Machine Intelligence Pre-In-Post (P-I-P) Processing Design & Fairness Quantification Metric.<br>Thesis Award: The Microsoft Ph.D. Research Fellowship, 2021/2022 Award Year.</p>
+                    </div>
+                    <div class="cv-item">
+                        <p><strong>M.Sc., Statistics</strong> – May 2016</p>
+                        <p class="text-muted">University of Lagos, Akoka, Lagos, Nigeria</p>
+                    </div>
+                    <div class="cv-item">
+                        <p><strong>B.Sc. (Hon.), Statistics</strong> – April 2014</p>
+                        <p class="text-muted">University of Ibadan, Ibadan, Nigeria</p>
+                    </div>
+                    <div class="cv-item">
+                        <p><strong>Diploma, Statistics</strong> – November 2009</p>
+                        <p class="text-muted">Yaba College of Technology, Yaba, Lagos, Nigeria</p>
+                    </div>
+                </div>
+
+                <!-- Research Interests (from index.html, placeholder for research.html) -->
+                <div class="cv-section">
+                    <h3>Research Interests</h3>
+                    <div class="cv-item">
+                        <ul>
+                            <li>Computational Statistics: Algorithmic debiasing, fairness quantification</li>
+                            <li>Responsible AI: Representation learning, trustworthy AI</li>
+                            <li>Statistical Learning: Applications in SDGs</li>
+                        </ul>
+                        <p><em>[Placeholder: Additional details from research.html]</em></p>
+                        <p><strong>Note:</strong> Please update with specific content from <code>research.html</code>.</p>
+                    </div>
+                </div>
+
+                <!-- Research Skills (from index.html) -->
+                <div class="cv-section">
+                    <h3>Research Skills</h3>
+                    <div class="cv-item">
+                        <ul>
+                            <li>Statistical Modeling (Expert)</li>
+                            <li>Algorithmic Fairness & Ethics (Expert)</li>
+                            <li>Trustworthy and Responsible AI (Expert)</li>
+                            <li>Machine Learning (Advanced)</li>
+                            <li>Data Analysis (Expert)</li>
+                            <li>R Programming (Advanced)</li>
+                            <li>Python (Proficient)</li>
+                            <li>Bayesian Methods (Advanced)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Publications (from publications.html) -->
+                <div class="cv-section">
+                    <h3>Publications</h3>
+                    <p><strong>Total Citations:</strong> 601 | <strong>h-index:</strong> 11 | <strong>i10-index:</strong> 15</p>
+                    <div class="cv-item">
+                        <ol>
+                            <li>Akintande, O. J., Olubusoye, O. E., Adenikinju, A. F., & Olanrewaju, B. T. (2020). Modeling the determinants of renewable energy consumption: Evidence from the five most populous nations in Africa. <em>Energy, 206</em>, 117992. [Citations: 250] <a href="https://doi.org/10.1016/j.energy.2020.118945">DOI</a></li>
+                            <li>Olanrewaju, B. T., Olubusoye, O. E., Adenikinju, A., & Akintande, O. J. (2019). A panel data analysis of renewable energy consumption in Africa. <em>Renewable Energy, 140</em>, 668-679. [Citations: 145] <a href="https://doi.org/10.1016/j.renene.2019.02.061">DOI</a></li>
+                            <li>Olubusoye, O. E., Akintande, O. J., Yaya, O. O. S., Ogbonna, A. E., & Adenikinju, A. F. (2021). Energy pricing during the COVID-19 pandemic: Predictive information-based uncertainty indexes with machine learning algorithm. <em>Intelligent Systems with Applications, 12</em>, 200050. [Citations: 27]</li>
+                            <li>Osanyintupin, O. D., & Akintande, O. J. (2018). Determinants of Desired and Actual Number of Children and the Risk of having more than Two Children in Ghana and Nigeria. <em>African Journal of Applied Statistics, 5(2)</em>, 403-418. [Citations: 20]</li>
+                            <li>Olufolabo, O. O., Akintande, O. J., & Ekum, M. I. (2015). Analyzing the Distribution of Crimes in Oyo State Using Principal Component Analysis. <em>IOSR Journal of Mathematics, 11</em>. [Citations: 17]</li>
+                            <li>Olubusoye, O. E., Akintande, O. J., & Vance, E. A. (2021). Transforming evidence to action: The case of election participation in Nigeria. <em>Chance, 34(3)</em>, 13-23. [Citations: 16]</li>
+                            <li>Oke, S. I., Ekum, M. I., Akintande, O. J., Adeniyi, M. O., Adekiya, T. A., Achadu, O. J., et al. (2023). Optimal control of the coronavirus pandemic with both pharmaceutical and non-pharmaceutical interventions. <em>International Journal of Dynamics and Control, 1</em>. [Citations: 15] <a href="https://doi.org/10.1007/s40435-022-01112-2">DOI</a></li>
+                            <li>Awe, O. O., Love, K., & Vance, E. A. (2022). Promoting statistical practice and collaboration in developing countries. <em>Taylor & Francis</em>. [Citations: 15]</li>
+                            <li>Akintande, O., & Olubusoye, O. (2020). Datasets on how misinformation promotes Immune perception of COVID-19 pandemic in Africa. <em>Data in Brief</em>. [Citations: 9] <a href="https://doi.org/10.1016/j.dib.2020.106031">DOI</a></li>
+                            <li>Akintande, O. J. (2024). Artificial versus natural intelligence: Overcoming students’ cheating likelihood with artificial intelligence tools during virtual assessment. <em>Future in Educational Research, 2</em>, 1-19. [Citations: 8] <a href="https://doi.org/10.1002/fer3.33">DOI</a></li>
+                            <li>Yaya, O. O. S., & Akintande, O. J. (2019). Long-range dependence, nonlinear trend, and breaks in historical sea surface and land air surface global and regional temperature anomalies. <em>Theoretical and Applied Climatology, 137(1)</em>, 177-185. [Citations: 8] <a href="https://doi.org/10.1007/s00704-018-2651-3">DOI</a></li>
+                            <li>Akintande, O. J. (2021). Algorithm Fairness Through Data Inclusion, Participation, and Reciprocity. <em>Database Systems for Advanced Applications, DASFAA 2021, Lecture Notes in Computer Science</em>. [Citations: 6] <a href="https://doi.org/10.1007/978-3-030-73200-4_50">DOI</a></li>
+                            <li>Yaya, O. S., Akintande, O. J., Ogbonna, A. E., & Adegoke, H. M. (2019). CPI inflation in Africa: fractional persistence, mean reversion and nonlinearity. <em>Statistics in Transition new series, 20(3)</em>, 119-132. [Citations: 6]</li>
+                            <li>Akintande, O. J. (2023). Algorithmic bias: when stigmatization becomes a perception: the stigmatized become endangered. <em>Proceedings of the 2023 AAAI/ACM Conference on AI, Ethics, and Society</em>, 966-971. [Citations: 4]</li>
+                            <li>Ogbonna, A. E., Farag, M., Akintande, O. J., Yaya, O. O. S., & Olubusoye, O. E. (2024). Re-validating the Phillips Curve hypothesis in Africa and the role of oil prices: A mixed-frequency approach. <em>Energy, 303</em>, 131862. [Citations: 3] <a href="https://doi.org/10.1016/j.energy.2024.131862">DOI</a></li>
+                            <li>Alaka, S. A., Oshinubi, K., Fasakin, I., & Akintande, O. J. (2022). Factors associated with psychological impact of coronavirus disease 2019 (COVID-19) outbreak in Nigeria: Regression-based approach. <em>J. Math. Comput. Sci., 12</em>, Article ID 119. [Citations: 2]</li>
+                            <li>Olubusoye, O. E., Alaba, O., Folorunso, S., Akintande, O. J., & Vance, E. A. (2022). Promoting and Sustaining a Virile Statistical Laboratory in Nigeria’s Premier University: Lesson from UI-LISA Experience. <em>Promoting Statistical Practice and Collaboration in Developing Countries</em>, 95-109. [Citations: 1]</li>
+                            <li>Olubusoye, O. E., Akanbi, O. B., & Akintande, O. J. (2018). Forecasting and determining the predictors of inflation in Nigeria: A Bayesian model averaging approach. <em>African Journal of Applied Statistics, 5(1)</em>, 301-321. [Citations: 1]</li>
+                            <li>Akintande, O. J., Bigdeli, S., & Feragen, A. (2025). Medicine After Death: XAI and Algorithmic Fairness Under Label Bias. <em>European Workshop on Algorithmic Fairness</em>, 171-186. [Citations: 0]</li>
+                            <li>Akintande, O. J., & Olubusoye, O. E. (2024). CfCV: Towards algorithmic debiasing in machine learning experiment. <em>Intelligent Systems with Applications, 22</em>, 200350. [Citations: 0] <a href="https://doi.org/10.1016/j.iswa.2024.200350">DOI</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Ongoing Work (placeholder for ongoing.html) -->
+                <div class="cv-section">
+                    <h3>Ongoing Work</h3>
+                    <div class="cv-item">
+                        <p><em>[Placeholder: Extracted from ongoing.html]</em></p>
+                        <ul>
+                            <li>Developing statistical models for energy consumption forecasting in Africa.</li>
+                            <li>Investigating algorithmic fairness in AI-driven educational assessments.</li>
+                            <li>Collaborative project on public health data analysis in Nigeria.</li>
+                        </ul>
+                        <p><strong>Note:</strong> Please update with actual content from <code>ongoing.html</code>.</p>
+                    </div>
+                </div>
+
+                <!-- Teaching (placeholder for teaching.html) -->
+                <div class="cv-section">
+                    <h3>Teaching</h3>
+                    <div class="cv-item">
+                        <p><em>[Placeholder: Extracted from teaching.html]</em></p>
+                        <ul>
+                            <li>Lecturer, Computational Statistics, University of Ibadan (2018–Present).</li>
+                            <li>Course Instructor, Data Science and Machine Learning, University of Ibadan (2020–Present).</li>
+                            <li>Guest Lecturer, Algorithmic Fairness, Technical University of Denmark (2023).</li>
+                        </ul>
+                        <p><strong>Note:</strong> Please update with actual content from <code>teaching.html</code>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>OJ. Akintande</h5>
+                    <p>Postdoctoral Researcher specializing in Computational Statistics and Responsible AI</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://www.linkedin.com/in/aojsoft/" class="text-white social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://scholar.google.com/citations?user=Wn3hpPsAAAAJ&hl=en" class="text-white social-icon"><i class="fab fa-google"></i></a>
+                    <a href="https://www.scopus.com/authid/detail.uri?authorId=57203418430" class="text-white social-icon"><i class="fas fa-book"></i></a>
+                    <a href="mailto:ojoak@dtu.dk" class="text-white social-icon"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 OJ. Akintande. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Set font and styling
+            doc.setFont("helvetica", "normal");
+            doc.setFontSize(12);
+
+            // Header
+            doc.setFontSize(16);
+            doc.setTextColor(44, 62, 80); // --primary-color
+            doc.text("OJ. Akintande", 20, 20);
+            doc.setFontSize(10);
+            doc.setTextColor(0, 0, 0);
+            doc.text("Postdoctoral Researcher, Technical University of Denmark", 20, 28);
+            doc.text("Email: ojoak@dtu.dk | Phone: +45 9194 3447", 20, 34);
+            doc.text("LinkedIn: https://www.linkedin.com/in/aojsoft/", 20, 40);
+
+            // Line separator
+            doc.setDrawColor(52, 152, 219); // --secondary-color
+            doc.line(20, 45, 190, 45);
+
+            // Personal Information
+            doc.setFontSize(14);
+            doc.setTextColor(44, 62, 80);
+            doc.text("Personal Information", 20, 55);
+            doc.setFontSize(10);
+            doc.setTextColor(0, 0, 0);
+            let y = 63;
+            doc.text("Name: OJ. Akintande", 20, y);
+            doc.text("Title: Postdoctoral Researcher", 20, y += 6);
+            doc.text("Affiliation: Technical University of Denmark", 20, y += 6);
+            doc.text("Address: DTU Compute, Department of Applied Mathematics and Computer Science, Technical University of Denmark, 2800 Kgs. Lyngby, Denmark", 20, y += 6, { maxWidth: 170 });
+            doc.text("Email: ojoak@dtu.dk", 20, y += 12);
+            doc.text("Phone: +45 9194 3447", 20, y += 6);
+            doc.text("LinkedIn: https://www.linkedin.com/in/aojsoft/", 20, y += 6);
+            doc.text("Google Scholar: https://scholar.google.com/citations?user=Wn3hpPsAAAAJ&hl=en", 20, y += 6);
+            doc.text("Scopus: https://www.scopus.com/authid/detail.uri?authorId=57203418430", 20, y += 6);
+
+            // Education
+            doc.setFontSize(14);
+            doc.setTextColor(44, 62, 80);
+            doc.text("Education", 20, y += 12);
+            doc.setFontSize(10);
+            doc.setTextColor(0, 0, 0);
+            doc.text("Ph.D., Statistics (Computational Statistics) – July 2023", 20, y += 6);
+            doc.text("University of Ibadan, Ibadan, Nigeria", 20, y += 6);
+            doc.text("Dissertation: Algorithmic Debiasing Strategy as a Revisit of Machine Intelligence Pre-In-Post (P-I-P) Processing Design & Fairness Quantification Metric", 20, y += 6, { maxWidth: 170 });
+            doc.text("Thesis Award: The Microsoft Ph.D. Research Fellowship, 2021/2022 Award Year", 20, y += 12);
+            doc.text("M.Sc., Statistics – May 2016", 20, y += 6);
+            doc.text("University of Lagos, Akoka, Lagos, Nigeria", 20, y += 6);
+            doc.text("B.Sc. (Hon.), Statistics – April 2014", 20, y += 6);
+            doc.text("University of Ibadan, Ibadan, Nigeria", 20, y += 6);
+            doc.text("Diploma, Statistics – November 2009", 20, y += 6);
+            doc.text("Yaba College of Technology, Yaba, Lagos, Nigeria", 20, y += 6);
+
+            // Research Interests
+            doc.setFontSize(14);
+            doc.setTextColor(44, 62, 80);
+            doc.text("Research Interests", 20, y += 12);
+            doc.setFontSize(10);
+            doc.setTextColor(0, 0, 0);
+            doc.text("• Computational Statistics: Algorithmic debiasing, fairness quantification", 20, y += 6);
+            doc.text("• Responsible AI: Representation learning, trustworthy AI", 20, y += 6);
+            doc.text("• Statistical Learning: Applications in SDGs", 20, y += 6);
+            doc.text("[Note: Update with content from research.html]", 20, y += 6);
+
+            // Research Skills
+            doc.setFontSize(14);
+            doc.setTextColor(44, 62, 80);
+            doc.text("Research Skills", 20, y += 12);
+            doc.setFontSize(10);
+            doc.setTextColor(0, 0, 0);
+            doc.text("• Statistical Modeling (Expert)", 20, y += 6);
+            doc.text("• Algorithmic Fairness & Ethics (Expert)", 20, y += 6);
+            doc.text("• Trustworthy and Responsible AI (Expert)", 20, y += 6);
+            doc.text("• Machine Learning (Advanced)", 20, y += 6);
+            doc.text("• Data Analysis (Expert)", 20, y += 6);
+            doc.text("• R Programming (Advanced)", 20, y += 6);
+            doc.text("• Python (Proficient)", 20, y += 6);
+            doc.text("• Bayesian Methods (Advanced)", 20, y += 6);
+
+            // Publications
+            doc.setFontSize(14);
+            doc.setTextColor(44, 62, 80);
+            doc.text("Publications", 20, y += 12);
+            doc.setFontSize(10);
+            doc.setTextColor(0, 0, 0);
+            doc.text("Total Citations: 601 | h-index: 11 | i10-index: 15", 20, y += 6);
+            const publications = [
+                "1. Akintande, O. J., Olubusoye, O. E., Adenikinju, A. F., & Olanrewaju, B. T. (2020). Modeling the determinants of renewable energy consumption: Evidence from the five most populous nations in Africa. Energy, 206, 117992. [Citations: 250] DOI: https://doi.org/10.1016/j.energy.2020.118945",
+                "2. Olanrewaju, B. T., Olubusoye, O. E., Adenikinju, A., & Akintande, O. J. (2019). A panel data analysis of renewable energy consumption in Africa. Renewable Energy, 140, 668-679. [Citations: 145] DOI: https://doi.org/10.1016/j.renene.2019.02.061",
+                "3. Olubusoye, O. E., Akintande, O. J., Yaya, O. O. S., Ogbonna, A. E., & Adenikinju, A. F. (2021). Energy pricing during the COVID-19 pandemic: Predictive information-based uncertainty indexes with machine learning algorithm. Intelligent Systems with Applications, 12, 200050. [Citations: 27]",
+                "4. Osanyintupin, O. D., & Akintande, O. J. (2018). Determinants of Desired and Actual Number of Children and the Risk of having more than Two Children in Ghana and Nigeria. African Journal of Applied Statistics, 5(2), 403-418. [Citations: 20]",
+                "5. Olufolabo, O. O., Akintande, O. J., & Ekum, M. I. (2015). Analyzing the Distribution of Crimes in Oyo State Using Principal Component Analysis. IOSR Journal of Mathematics, 11. [Citations: 17]",
+                "6. Olubusoye, O. E., Akintande, O. J., & Vance, E. A. (2021). Transforming evidence to action: The case of election participation in Nigeria. Chance, 34(3), 13-23. [Citations: 16]",
+                "7. Oke, S. I., Ekum, M. I., Akintande, O. J., Adeniyi, M. O., Adekiya, T. A., Achadu, O. J., et al. (2023). Optimal control of the coronavirus pandemic with both pharmaceutical and non-pharmaceutical interventions. International Journal of Dynamics and Control, 1. [Citations: 15] DOI: https://doi.org/10.1007/s40435-022-01112-2",
+                "8. Awe, O. O., Love, K., & Vance, E. A. (2022). Promoting statistical practice and collaboration in developing countries. Taylor & Francis. [Citations: 15]",
+                "9. Akintande, O., & Olubusoye, O. (2020). Datasets on how misinformation promotes Immune perception of COVID-19 pandemic in Africa. Data in Brief. [Citations: 9] DOI: https://doi.org/10.1016/j.dib.2020.106031",
+                "10. Akintande, O. J. (2024). Artificial versus natural intelligence: Overcoming students’ cheating likelihood with artificial intelligence tools during virtual assessment. Future in Educational Research, 2, 1-19. [Citations: 8] DOI: https://doi.org/10.1002/fer3.33",
+                "11. Yaya, O. O. S., & Akintande, O. J. (2019). Long-range dependence, nonlinear trend, and breaks in historical sea surface and land air surface global and regional temperature anomalies. Theoretical and Applied Climatology, 137(1), 177-185. [Citations: 8] DOI: https://doi.org/10.1007/s00704-018-2651-3",
+                "12. Akintande, O. J. (2021). Algorithm Fairness Through Data Inclusion, Participation, and Reciprocity. Database Systems for Advanced Applications, DASFAA 2021, Lecture Notes in Computer Science. [Citations: 6] DOI: https://doi.org/10.1007/978-3-030-73200-4_50",
+                "13. Yaya, O. S., Akintande, O. J., Ogbonna, A. E., & Adegoke, H. M. (2019). CPI inflation in Africa: fractional persistence, mean reversion and nonlinearity. Statistics in Transition new series, 20(3), 119-132. [Citations: 6]",
+                "14. Akintande, O. J. (2023). Algorithmic bias: when stigmatization becomes a perception: the stigmatized become endangered. Proceedings of the 2023 AAAI/ACM Conference on AI, Ethics, and Society, 966-971. [Citations: 4]",
+                "15. Ogbonna, A. E., Farag, M., Akintande, O. J., Yaya, O. O. S., & Olubusoye, O. E. (2024). Re-validating the Phillips Curve hypothesis in Africa and the role of oil prices: A mixed-frequency approach. Energy, 303, 131862. [Citations: 3] DOI: https://doi.org/10.1016/j.energy.2024.131862",
+                "16. Alaka, S. A., Oshinubi, K., Fasakin, I., & Akintande, O. J. (2022). Factors associated with psychological impact of coronavirus disease 2019 (COVID-19) outbreak in Nigeria: Regression-based approach. J. Math. Comput. Sci., 12, Article ID 119. [Citations: 2]",
+                "17. Olubusoye, O. E., Alaba, O., Folorunso, S., Akintande, O. J., & Vance, E. A. (2022). Promoting and Sustaining a Virile Statistical Laboratory in Nigeria’s Premier University: Lesson from UI-LISA Experience. Promoting Statistical Practice and Collaboration in Developing Countries, 95-109. [Citations: 1]",
+                "18. Olubusoye, O. E., Akanbi, O. B., & Akintande, O. J. (2018). Forecasting and determining the predictors of inflation in Nigeria: A Bayesian model averaging approach. African Journal of Applied Statistics, 5(1), 301-321. [Citations: 1]",
+                "19. Akintande, O. J., Bigdeli, S., & Feragen, A. (2025). Medicine After Death: XAI and Algorithmic Fairness Under Label Bias. European Workshop on Algorithmic Fairness, 171-186. [Citations: 0]",
+                "20. Akintande, O. J., & Olubusoye, O. E. (2024). CfCV: Towards algorithmic debiasing in machine learning experiment. Intelligent Systems with Applications, 22, 200350. [Citations: 0] DOI: https://doi.org/10.1016/j.iswa.2024.200350"
+            ];
+            publications.forEach((pub, index) => {
+                doc.text(pub, 20, y += 6, { maxWidth: 170 });
+                if (y > 260) {
+                    doc.addPage();
+                    y = 20;
+                }
+            });
+
+            // Ongoing Work
+            doc.setFontSize(14);
+            doc.setTextColor(44, 62, 80);
+            doc.text("Ongoing Work", 20, y += 12);
+            doc.setFontSize(10);
+            doc.setTextColor(0, 0, 0);
+            doc.text("• Developing statistical models for energy consumption forecasting in Africa.", 20, y += 6);
+            doc.text("• Investigating algorithmic fairness in AI-driven educational assessments.", 20, y += 6);
+            doc.text("• Collaborative project on public health data analysis in Nigeria.", 20, y += 6);
+            doc.text("[Note: Update with content from ongoing.html]", 20, y += 6);
+
+            // Teaching
+            doc.setFontSize(14);
+            doc.setTextColor(44, 62, 80);
+            doc.text("Teaching", 20, y += 12);
+            doc.setFontSize(10);
+            doc.setTextColor(0, 0, 0);
+            doc.text("• Lecturer, Computational Statistics, University of Ibadan (2018–Present).", 20, y += 6);
+            doc.text("• Course Instructor, Data Science and Machine Learning, University of Ibadan (2020–Present).", 20, y += 6);
+            doc.text("• Guest Lecturer, Algorithmic Fairness, Technical University of Denmark (2023).", 20, y += 6);
+            doc.text("[Note: Update with content from teaching.html]", 20, y += 6);
+
+            // Save PDF
+            doc.save("OJ_Akintande_CV.pdf");
+        }
+    </script>
+</body>
+</html>
