@@ -41,6 +41,11 @@
             color: var(--secondary-color) !important;
         }
         
+        .dropdown-item:hover {
+            background-color: var(--secondary-color);
+            color: #fff !important;
+        }
+        
         .profile-img {
             width: 200px;
             height: 200px;
@@ -183,8 +188,8 @@
         
         .side-banner {
             position: fixed;
-            top: 100px;
-            left: 20px;
+            bottom: 20px;
+            right: 20px;
             text-align: center;
         }
         
@@ -242,7 +247,7 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation with Dropdown -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html"><i class="fas fa-user-tie"></i> O. J. Akintande</a>
@@ -251,26 +256,35 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="publications.html">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ongoing.html">Ongoing Work</a></li>
-                    <li class="nav-item"><a class="nav-link" href="teaching.html">Lectures/Teaching</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="workDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Work
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="workDropdown">
+                            <li><a class="dropdown-item" href="research.html">Research</a></li>
+                            <li><a class="dropdown-item active" href="publications.html">Publications</a></li>
+                            <li><a class="dropdown-item" href="ongoing.html">Ongoing Work</a></li>
+                            <li><a class="dropdown-item" href="teaching.html">Lectures/Teaching</a></li>
+                            <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Side Banner -->
-    <div class="side-banner" style="display: block;">
-        <img src="webpic.jpg" alt="Profile Photo" class="profile-img-sm" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20fill%3D%22%233498db%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-size%3D%2220%22%20fill%3D%22white%22%3EOJ%3C%2Ftext%3E%3C%2Fsvg%3E'">
+    <div class="side-banner">
+        <img src="https://raw.githubusercontent.com/ojakintande/ojakintande.github.io/main/webpic.jpg" alt="OJ. Akintande" class="profile-img mb-3" onerror="this.src='https://placehold.co/300x300/2c3e50/FFFFFF?text=Dr.+Akintande';">
         <h6>O. J. Akintande</h6>
         <p>Postdoctoral Researcher</p>
         <div class="btn-group">
             <a href="https://scholar.google.com/citations?user=Wn3hpPsAAAAJ&hl=en" class="btn btn-light btn-sm"><i class="fab fa-google"></i></a>
             <a href="https://www.scopus.com/authid/detail.uri?authorId=57203418430" class="btn btn-light btn-sm"><i class="fas fa-database"></i></a>
-            <a href="https://www.webofscience.com/wos/author/search?searchMode=GeneralSearch&selectedIds=Olalekan+Joseph+Akintande" class="btn btn-light btn-sm"><i class="fas fa-chart-line"></i></a>
+            <a href="https://www.webofscience.com/wos/author/record/JCO-2595-2023" class="btn btn-light btn-sm"><i class="fas fa-chart-line"></i></a>
         </div>
     </div>
 
@@ -518,7 +532,7 @@
                     <h5><i class="fas fa-database text-primary me-2"></i> Research Databases</h5>
                     <div class="d-grid gap-2">
                         <a href="https://www.scopus.com/authid/detail.uri?authorId=57203418430" class="btn btn-outline-primary btn-sm">Scopus Profile</a>
-                        <a href="https://www.webofscience.com/wos/author/search?searchMode=GeneralSearch&selectedIds=Olalekan+Joseph+Akintande" class="btn btn-outline-primary btn-sm">Web of Science</a>
+                        <a href="https://www.webofscience.com/wos/author/record/JCO-2595-2023" class="btn btn-outline-primary btn-sm">Web of Science</a>
                         <a href="https://www.researchgate.net/profile/Olalekan-Akintande" class="btn btn-outline-primary btn-sm">ResearchGate</a>
                     </div>
                 </div>

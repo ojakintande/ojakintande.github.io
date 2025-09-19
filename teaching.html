@@ -41,6 +41,11 @@
             color: var(--secondary-color) !important;
         }
         
+        .dropdown-item:hover {
+            background-color: var(--secondary-color);
+            color: #fff !important;
+        }
+        
         .profile-img {
             width: 200px;
             height: 200px;
@@ -183,8 +188,8 @@
         
         .side-banner {
             position: fixed;
-            top: 100px;
-            left: 20px;
+            bottom: 20px;
+            right: 20px;
             text-align: center;
         }
         
@@ -242,7 +247,7 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation with Dropdown -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html"><i class="fas fa-user-tie"></i> O. J. Akintande</a>
@@ -251,149 +256,89 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-                    <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ongoing.html">Ongoing Work</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="teaching.html">Lectures/Teaching</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="workDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Work
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="workDropdown">
+                            <li><a class="dropdown-item" href="research.html">Research</a></li>
+                            <li><a class="dropdown-item" href="publications.html">Publications</a></li>
+                            <li><a class="dropdown-item" href="ongoing.html">Ongoing Work</a></li>
+                            <li><a class="dropdown-item active" href="teaching.html">Lectures/Teaching</a></li>
+                            <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <div class="container mt-5 pt-4">
-        <h1 class="mb-4">Lectures & Teaching Experience</h1>
-        
-        <div class="teaching-experience">
-            <div class="institution-section mb-5">
-                <h3 class="text-primary">University of Ibadan, Nigeria</h3>
-                <p class="text-muted">Lecturer and Researcher, December 2022 to July 2024</p>
-                
-                <div class="courses-list">
-                    <div class="course-item mb-3">
-                        <h5>Statistical Computing II – STA 231</h5>
-                        <p class="text-muted">Class size: ~60 students</p>
-                    </div>
-                    
-                    <div class="course-item mb-3">
-                        <h5>Statistical Computing III – STA 331</h5>
-                        <p class="text-muted">Class size: ~60 students</p>
-                    </div>
-                    
-                    <div class="course-item mb-3">
-                        <h5>Statistical Quality Control – STA 341</h5>
-                        <p class="text-muted">Class size: ~70 students</p>
-                    </div>
-                    
-                    <div class="course-item mb-3">
-                        <h5>Probability and Stochastic Process – STA 311</h5>
-                        <p class="text-muted">Class size: ~40 students</p>
-                    </div>
-                    
-                    <div class="course-item mb-3">
-                        <h5>Advanced Statistical Computing (PGD) – STA 721</h5>
-                        <p class="text-muted">Class size: ~4 students</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="institution-section mb-5">
-                <h3 class="text-primary">Distance Learning Center, University of Ibadan, Nigeria</h3>
-                <p class="text-muted">Adjunct Lecturer, 2018 to July 2024</p>
-                
-                <div class="courses-list">
-                    <div class="course-item mb-3">
-                        <h5>Statistical Computing II – STA 231</h5>
-                        <p class="text-muted">Class size: ~20 students</p>
-                    </div>
-                    
-                    <div class="course-item mb-3">
-                        <h5>Statistical Inference II – STA 221</h5>
-                        <p class="text-muted">Class size: ~25 students</p>
-                    </div>
-                    
-                    <div class="course-item mb-3">
-                        <h5>Probability and Stochastic Process – STA 311</h5>
-                        <p class="text-muted">Class size: ~10 students</p>
-                    </div>
-                    
-                    <div class="course-item mb-3">
-                        <h5>Educational Statistics – STA 455</h5>
-                        <p class="text-muted">Class size: ~4 students</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="institution-section mb-5">
-                <h3 class="text-primary">University of Ibadan, Nigeria</h3>
-                <p class="text-muted">Teaching Assistant, 2018 to 2020</p>
-                
-                <div class="courses-list">
-                    <div class="course-item mb-3">
-                        <h5>General Statistics – STA 111</h5>
-                        <p class="text-muted">Class size: ~700 students (University Course)</p>
-                    </div>
-                    
-                    <div class="course-item mb-3">
-                        <h5>Statistical Inference II – STA 221</h5>
-                        <p class="text-muted">Class size: ~100 students</p>
-                    </div>
-                    
-                    <div class="course-item mb-3">
-                        <h5>Probabilistic Graphical Models – STA 772</h5>
-                        <p class="text-muted">Class size: ~15 students</p>
-                    </div>
-                    
-                    <div class="course-item mb-3">
-                        <h5>Statistical Data Mining – STA 779</h5>
-                        <p class="text-muted">Class size: ~15 students</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="institution-section mb-5">
-                <h3 class="text-primary">Neuromatch Academy, USA</h3>
-                <p class="text-muted">Teaching Assistant (virtual), Computational Neuroscience, 2021, 2024</p>
-                
-                <div class="courses-list">
-                    <div class="course-item mb-3">
-                        <h5>Computational Neuroscience Courses</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="student-supervision mt-5">
-            <h3 class="mb-4">Student Supervision</h3>
-            
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="supervision-item mb-3">
-                        <h5>Undergraduate Students</h5>
-                        <ul>
-                            <li>Four (4) students (2023/2024)</li>
-                            <li>Two (2) students (2022/2023)</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="col-md-6">
-                    <div class="supervision-item mb-3">
-                        <h5>Graduate Students</h5>
-                        <ul>
-                            <li>Two (2) Master students (2023/2024)</li>
-                            <li>Two (2) Post Graduate Diploma students (2022/2023)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <!-- Side Banner -->
+    <div class="side-banner">
+        <img src="https://raw.githubusercontent.com/ojakintande/ojakintande.github.io/main/webpic.jpg" alt="OJ. Akintande" class="profile-img mb-3" onerror="this.src='https://placehold.co/300x300/2c3e50/FFFFFF?text=Dr.+Akintande';">
+        <h6>O. J. Akintande</h6>
+        <p>Postdoctoral Researcher</p>
+        <div class="btn-group">
+            <a href="https://scholar.google.com/citations?user=Wn3hpPsAAAAJ&hl=en" class="btn btn-light btn-sm"><i class="fab fa-google"></i></a>
+            <a href="https://www.scopus.com/authid/detail.uri?authorId=57203418430" class="btn btn-light btn-sm"><i class="fas fa-database"></i></a>
+            <a href="https://www.webofscience.com/wos/author/record/JCO-2595-2023"></i></a>
         </div>
     </div>
 
+    <!-- Main Content -->
+    <section class="container mb-5">
+        <div class="two-column-layout">
+            <div class="main-content">
+                <div class="section-card">
+                    <h2>Lectures/Teaching</h2>
+                    <p>My teaching experience spans undergraduate and postgraduate courses in statistics, machine learning, and data science, with a focus on fostering analytical thinking and practical skills.</p>
+                    
+                    <h5 class="mt-4">Teaching Experience:</h5>
+                    <ul>
+                        <li><strong>Postdoc, Technical University of Denmark (DTU)</strong>, 2024–Present: Computational Statistics, Representation Learning and Responsible AI.</li>
+                        <li><strong>Lecturer, University of Ibadan, Nigeria</strong>, 2018–2023: Delivered courses on Statistical Modeling, Machine Learning, and Data Analysis.</li>
+                        <li><strong>Teaching Assistant, University of Ibadan</strong>, 2016–2018: Supported courses in Probability Theory and Statistical Inference.</li>
+                    </ul>
+                    
+                    <h5 class="mt-4">Courses Taught:</h5>
+                    <ul>
+                        <li>Introduction to Computational Statistics</li>
+                        <li>Machine Learning for Data Scientists</li>
+                        <li>Statistical Modeling and Inference</li>
+                        <li>Responsible AI and Ethics</li>
+                        <li>Data Analysis with R and Python</li>
+                    </ul>
+                    
+                    <h5 class="mt-4">Teaching Philosophy:</h5>
+                    <p>I emphasize hands-on learning, encouraging students to apply statistical and computational methods to real-world problems. My courses integrate theoretical foundations with practical applications, preparing students for careers in academia and industry.</p>
+                </div>
+            </div>
+            
+            <div class="side-content">
+                <div class="side-card">
+                    <h5><i class="fas fa-chalkboard-teacher text-primary me-2"></i> Teaching Stats</h5>
+                    <div class="text-center">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Years Teaching</div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Courses Taught</div>
+                    </div>
+                    <div class="mt-3">
+                        <a href="research.html" class="btn btn-outline-primary btn-sm w-100 mb-2">Research Interests</a>
+                        <a href="publications.html" class="btn btn-outline-primary btn-sm w-100">Publications</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
+    <footer class="bg-dark text-white py-4">
         <div class="container text-center">
             <p>&copy; 2025 O. J. Akintande. All rights reserved. | Email: <a href="mailto:ojoak@dtu.dk">ojoak@dtu.dk</a> | <a href="https://www.linkedin.com/in/aojsoft/">LinkedIn</a> | <a href="https://www.researchgate.net/profile/Olalekan-Akintande">ResearchGate</a></p>
         </div>
