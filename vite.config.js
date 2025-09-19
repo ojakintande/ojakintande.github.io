@@ -1,17 +1,10 @@
 import { defineConfig } from 'vite'
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  base: './', // Use relative paths for GitHub Pages
+  base: './', // This is correct for relative paths
   build: {
-    outDir: 'docs', // Changed from 'dist' to 'docs'
+    outDir: 'dist', // Build to dist, not docs
     sourcemap: false,
-    rollupOptions: {
-      output: {
-        manualChunks: undefined,
-        inlineDynamicImports: false
-      }
-    }
   },
   server: {
     port: 3000
