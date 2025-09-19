@@ -1,10 +1,16 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: './', // This is correct for relative paths
+  base: './',
   build: {
-    outDir: 'dist', // Build to dist, not docs
+    outDir: 'dist', // Make sure this says 'dist', not 'docs'
     sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+        inlineDynamicImports: false
+      }
+    }
   },
   server: {
     port: 3000
